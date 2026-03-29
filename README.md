@@ -63,13 +63,7 @@ Si vous souhaitez contribuer, suivez les étapes ci-dessous pour faire un **fork
 ### Comment contribuer ?
 
 1. **Fork le projet** :  
-   Allez sur la page GitHub du projet et cliquez sur le bouton **Fork** dans le coin supérieur droit pour créer une copie du projet dans votre propre compte GitHub.
-
-2. **Clonez votre fork** :  
-   Clonez le fork sur votre machine locale :
-   ```bash
-   git clone https://github.com/SN9LZ4/6coreJava.git
-   cd 6coreJava
+   Allez sur la page GitHub du projet et cliquez sur le bouton **Fork** dans le coin supérieur droit pour créer une copie du projet dans votre propre compte GitHub
 ## Licence
 
 Ce projet est sous licence **MIT** – voir le fichier [`LICENSE`](./LICENSE) pour plus de détails.
