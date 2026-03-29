@@ -68,9 +68,3 @@ Si vous souhaitez contribuer, suivez les étapes ci-dessous pour faire un **fork
 
 Ce projet est sous licence **MIT** – voir le fichier [`LICENSE`](./LICENSE) pour plus de détails.
 
-## Contact
-
-Pour toute question ou suggestion, n'hésitez pas à nous contacter :
-
-- **Email** : [contact@chouflifilm.com](mailto:eya.khadhraoui@esprit.tn)  
-- **GitHub** : [https://github.com/SN9LZ4/6coreJava](https://github.com/eyakhadhraoui/ChoufliFilm)
