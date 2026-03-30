@@ -1,0 +1,109 @@
+/* Base chart styling */
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+}
+
+.chart-content {
+    -fx-padding: 10px;
+}
+
+.chart-title {
+    -fx-text-fill: #4169E1;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+/* Axis styling */
+.axis {
+    -fx-tick-label-fill: #6495ED;
+    -fx-font-size: 12px;
+}
+
+.axis-label {
+    -fx-text-fill: #4169E1;
+    -fx-font-size: 14px;
+}
+
+/* Bar Chart styling */
+.default-color0.chart-bar {
+    -fx-bar-fill: #6495ED;
+    -fx-background-color: #6495ED, white;
+    -fx-background-radius: 5px;
+}
+
+.chart-bar {
+    -fx-bar-fill: #6495ED;
+    -fx-background-radius: 5px;
+}
+
+/* Area Chart styling */
+.default-color0.chart-area-symbol {
+    -fx-background-color: #6495ED, white;
+}
+
+.default-color0.chart-series-area-line {
+    -fx-stroke: #6495ED;
+}
+
+.default-color0.chart-area-fill {
+    -fx-fill: rgba(100, 149, 237, 0.4);
+}
+
+/* Line Chart styling */
+.default-color0.chart-series-line {
+    -fx-stroke: #6495ED;
+    -fx-stroke-width: 3px;
+}
+
+.default-color0.chart-line-symbol {
+    -fx-background-color: #6495ED, white;
+}
+
+/* Additional colors for multiple series if needed */
+.default-color1.chart-series-line {
+    -fx-stroke: #4169E1;
+}
+
+.default-color1.chart-line-symbol {
+    -fx-background-color: #4169E1, white;
+}
+
+.default-color1.chart-area-fill {
+    -fx-fill: rgba(65, 105, 225, 0.4);
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #4169E1;
+}
+
+/* Chart plot background */
+.chart-plot-background {
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 5px;
+}
+
+/* Chart symbols */
+.chart-symbol {
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Chart vertical and horizontal grid lines */
+.chart-vertical-grid-lines {
+    -fx-stroke: rgba(100, 149, 237, 0.2);
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(100, 149, 237, 0.2);
+}
+
+/* Animation for hover effects on bars */
+.chart-bar:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(65, 105, 225, 0.8), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}

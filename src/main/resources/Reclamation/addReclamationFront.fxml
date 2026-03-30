@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.reclamation.frontController">
+    <stylesheets>
+        <URL value="@../css/reclamation.css" />
+    </stylesheets>
+
+    <top>
+        <!-- Navigation Bar with Professional Design -->
+        <VBox spacing="0" style="-fx-background-color: transparent;">
+            <!-- Top Info Bar with Professional Gradient -->
+            <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: linear-gradient(to right, #1e3c72, #2a5298); -fx-background-radius: 0 0 20 20;" styleClass="top-info-bar">
+                <padding>
+                    <Insets bottom="12" left="25" right="25" top="12" />
+                </padding>
+
+                <Label style="-fx-text-fill: white; -fx-font-weight: 600;" styleClass="info-text" text="123 Esprit, Elghazela, Tunisie">
+                    <graphic>
+                        <ImageView fitHeight="18" fitWidth="18">
+                            <Image url="@icons/location-pin.png" />
+                            <effect>
+                                <Bloom threshold="0.3" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.3" />
+                    </effect>
+                </Label>
+
+                <Label style="-fx-text-fill: white; -fx-font-weight: 600;" styleClass="info-text" text="+216 24 705 213">
+                    <graphic>
+                        <ImageView fitHeight="18" fitWidth="18">
+                            <Image url="@icons/phone-call.png" />
+                            <effect>
+                                <Bloom threshold="0.3" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.3" />
+                    </effect>
+                </Label>
+
+                <Label style="-fx-text-fill: white; -fx-font-weight: 600;" styleClass="info-text" text="ChouFliFilm@gmail.com">
+                    <graphic>
+                        <ImageView fitHeight="18" fitWidth="18">
+                            <Image url="@icons/email-envelope.png" />
+                            <effect>
+                                <Bloom threshold="0.3" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.3" />
+                    </effect>
+                </Label>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Social Media Icons with Professional Design -->
+                <HBox alignment="CENTER_RIGHT" spacing="15">
+                    <Button style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 50%; -fx-min-width: 34px; -fx-min-height: 34px; -fx-max-width: 34px; -fx-max-height: 34px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/twitter.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 50%; -fx-min-width: 34px; -fx-min-height: 34px; -fx-max-width: 34px; -fx-max-height: 34px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/facebook.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 50%; -fx-min-width: 34px; -fx-min-height: 34px; -fx-max-width: 34px; -fx-max-height: 34px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/linkedin.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 50%; -fx-min-width: 34px; -fx-min-height: 34px; -fx-max-width: 34px; -fx-max-height: 34px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/instagram.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.2); -fx-background-radius: 50%; -fx-min-width: 34px; -fx-min-height: 34px; -fx-max-width: 34px; -fx-max-height: 34px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/youtube.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                </HBox>
+            </HBox>
+
+            <!-- Main Navigation with Professional Glassmorphism Effect -->
+            <HBox alignment="CENTER" prefHeight="86.0" prefWidth="1563.0" spacing="20" style="-fx-background-color: rgba(30, 38, 56, 0.95); -fx-background-radius: 0 0 30 30;" styleClass="main-nav">
+                <padding>
+                    <Insets bottom="15" left="25" right="25" top="15" />
+                </padding>
+
+                <!-- Logo with Professional Glow Effect -->
+                <StackPane>
+                    <ImageView fitHeight="75.0" fitWidth="162.0" styleClass="logo">
+                        <image>
+                            <Image url="@../images/logo.png" />
+                        </image>
+                    </ImageView>
+                    <effect>
+                        <Glow level="0.4">
+                            <input>
+                                <DropShadow color="#305bb2" height="20" radius="9.5" spread="0.1" width="20" />
+                            </input>
+                        </Glow>
+                    </effect>
+                </StackPane>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Navigation Buttons with Professional Design -->
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #e6e6e6; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 25;" styleClass="nav-btn" text="Home">
+                    <effect>
+                        <DropShadow color="rgba(200,200,255,0.2)" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #e6e6e6; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 25;" styleClass="nav-btn" text="About">
+                    <effect>
+                        <DropShadow color="rgba(200,200,255,0.2)" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #e6e6e6; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 25;" styleClass="nav-btn" text="Films">
+                    <effect>
+                        <DropShadow color="rgba(200,200,255,0.2)" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #e6e6e6; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 25;" styleClass="nav-btn" text="Bénévolat">
+                    <effect>
+                        <DropShadow color="rgba(200,200,255,0.2)" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+
+                <!-- Active Navigation Button with Professional Effect -->
+                <Button style="-fx-background-color: linear-gradient(to right, #2a5298, #1e3c72); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 25;" styleClass="nav-btn, nav-btn-active" text="Reclamations">
+                    <effect>
+                        <DropShadow color="#2a5298" height="15" radius="7" width="15" />
+                    </effect>
+                </Button>
+
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #e6e6e6; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-border-radius: 25;" styleClass="nav-btn" text="Blogs">
+                    <effect>
+                        <DropShadow color="rgba(200,200,255,0.2)" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+
+                <!-- Cart Button with Professional 3D Effect -->
+                <Button style="-fx-background-color: rgba(80,100,140,0.4); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 25; -fx-padding: 10 20;" styleClass="cart-btn" text="Panier">
+                    <graphic>
+                        <ImageView fitHeight="18" fitWidth="18">
+                            <Image url="@icons/shopping-cart.png" />
+                            <effect>
+                                <Bloom threshold="0.2" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.4)" height="12.0" radius="5.5" width="12.0" />
+                    </effect>
+                </Button>
+
+                <!-- Notification Button with Professional Look -->
+                <StackPane>
+                    <Button style="-fx-background-color: rgba(80,100,140,0.4); -fx-background-radius: 50%; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;" styleClass="notification-btn">
+                        <graphic>
+                            <ImageView fitHeight="20" fitWidth="20">
+                                <Image url="@icons/notification-bell.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.4)" height="12" radius="5.5" width="12" />
+                        </effect>
+                    </Button>
+                    <Label style="-fx-background-color: #2a5298; -fx-text-fill: white; -fx-background-radius: 50%; -fx-min-width: 20px; -fx-min-height: 20px; -fx-alignment: center; -fx-font-weight: bold;" styleClass="notification-count" text="0" />
+                </StackPane>
+
+                <!-- Logout Button with Professional Gradient -->
+                <Button style="-fx-background-color: linear-gradient(to right, #2a5298, #1e3c72); -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 25; -fx-padding: 10 20;" styleClass="logout-btn" text="Logout">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16">
+                            <Image url="@icons/logout.png" />
+                            <effect>
+                                <Bloom threshold="0.2" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <DropShadow color="#1e3c72" height="12" radius="5.5" width="12" />
+                    </effect>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <!-- Main Content Area with Professional Background -->
+        <StackPane style="-fx-background-color: #121a26;" styleClass="main-content-area">
+            <!-- Background Image with Professional Effect -->
+            <ImageView fitHeight="500" fitWidth="1000" preserveRatio="false" styleClass="hero-background">
+                <Image url="@../images/back.png" />
+                <effect>
+                    <GaussianBlur radius="3.0">
+                        <input>
+                            <ColorAdjust brightness="-0.1" contrast="0.2" hue="0.0" saturation="0.0" />
+                        </input>
+                    </GaussianBlur>
+                </effect>
+            </ImageView>
+
+            <!-- Overlay with Professional Gradient -->
+            <Rectangle height="693.0" width="1532.0">
+                <fill>
+                    <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+                        <stops>
+                            <Stop color="rgba(18, 26, 38, 0.85)" />
+                            <Stop color="rgba(30, 45, 75, 0.8)" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </fill>
+            </Rectangle>
+
+            <!-- Réclamation Form with Professional Glassmorphism -->
+            <VBox alignment="CENTER" maxHeight="500.0" maxWidth="869.0" minHeight="400.0" minWidth="400.0" prefHeight="500.0" prefWidth="869.0" spacing="25" style="-fx-background-color: rgba(240, 245, 250, 0.08); -fx-background-radius: 20; -fx-border-color: rgba(240, 245, 250, 0.15); -fx-border-width: 1; -fx-border-radius: 20;" styleClass="form-container">
+                <effect>
+                    <DropShadow color="rgba(0, 0, 0, 0.4)" height="25" radius="12" width="25" />
+                </effect>
+                <padding>
+                    <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+                </padding>
+
+                <!-- Title with Professional Effect -->
+                <Label style="-fx-text-fill: #f0f5fa; -fx-font-family: 'Segoe UI'; -fx-font-size: 32px; -fx-font-weight: 700;" styleClass="form-title" text="ADD RECLAMATION">
+                    <effect>
+                        <DropShadow color="#2a5298" height="15" radius="7" spread="0.1" width="15">
+                            <input>
+                                <Glow level="0.3" />
+                            </input>
+                        </DropShadow>
+                    </effect>
+                    <padding>
+                        <Insets bottom="20" />
+                    </padding>
+                </Label>
+
+                <!-- Type Selection ComboBox with Professional Styling -->
+                <VBox spacing="10">
+                    <Label style="-fx-text-fill: #e6e6e6; -fx-font-size: 16px; -fx-font-weight: bold;" text="Type de réclamation">
+                        <effect>
+                            <Glow level="0.2" />
+                        </effect>
+                    </Label>
+                    <ComboBox fx:id="typeComboBox" prefHeight="50.0" prefWidth="782.0" promptText="Sélectionnez le type de réclamation" style="-fx-background-color: rgba(240, 245, 250, 0.08);                      -fx-text-fill: white;                      -fx-prompt-text-fill: #a0a0a0;                      -fx-background-radius: 10;                      -fx-border-color: rgba(240, 245, 250, 0.2);                      -fx-border-width: 1;                      -fx-border-radius: 10;                      -fx-font-size: 15px;">
+                        <effect>
+                            <DropShadow color="rgba(0, 0, 0, 0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Type Technique" />
+                                <String fx:value="Type Paiement" />
+                                <String fx:value="Type Réservation" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </VBox>
+
+                <!-- Description TextArea with Professional Styling -->
+                <VBox spacing="10">
+                    <Label style="-fx-text-fill: #e6e6e6; -fx-font-size: 16px; -fx-font-weight: bold;" styleClass="form-label" text="Description">
+                        <effect>
+                            <Glow level="0.2" />
+                        </effect>
+                    </Label>
+                    <TextArea fx:id="descriptionTextArea" prefHeight="120.0" prefWidth="782.0" promptText="Veuillez décrire votre problème en détail..." style="-fx-background-color: rgba(240, 245, 250, 0.08); -fx-text-fill: white; -fx-prompt-text-fill: #a0a0a0; -fx-background-radius: 10; -fx-border-color: rgba(240, 245, 250, 0.2); -fx-border-width: 1; -fx-border-radius: 10; -fx-font-size: 15px;" wrapText="true">
+                        <effect>
+                            <DropShadow color="rgba(0, 0, 0, 0.3)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </TextArea>
+
+                    <!-- Image Chooser with Professional 3D Button -->
+                    <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 10 0 0 0;">
+                        <Button fx:id="imageChooserButton" onAction="#chooseImage" prefHeight="45.0" prefWidth="200.0" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-background-color: linear-gradient(to right, #2C3E50, #4CA1AF); -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 12;" text="Choisir une Image">
+                            <graphic>
+                                <ImageView fitHeight="18" fitWidth="18">
+                                    <Image url="@icons/upload-image.png" />
+                                    <effect>
+                                        <Bloom threshold="0.2" />
+                                    </effect>
+                                </ImageView>
+                            </graphic>
+                            <effect>
+                                <DropShadow color="rgba(0, 0, 0, 0.4)" height="12" radius="5.5" width="12" />
+                            </effect>
+                        </Button>
+
+                        <Label fx:id="imagePathLabel" style="-fx-font-size: 15px; -fx-text-fill: #a0a0a0;" text="Aucune image sélectionnée">
+                            <effect>
+                                <Glow level="0.1" />
+                            </effect>
+                        </Label>
+                    </HBox>
+                </VBox>
+
+                <!-- Submit Button with Professional Effect -->
+                <Button fx:id="submitButton" onAction="#addReclamation" prefHeight="50.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to right, #1e3c72, #2a5298); -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 12 25;" styleClass="submit-btn" text="Réclamer">
+                    <effect>
+                        <DropShadow color="#1e3c72" height="15" radius="7" spread="0.1" width="15" />
+                    </effect>
+                </Button>
+                <StackPane.margin>
+                    <Insets bottom="60.0" top="40.0" />
+                </StackPane.margin>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

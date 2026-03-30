@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.dashboardcontroller">
+
+   <children>
+      <!-- Animated Background with Exact Circles from Login Page -->
+      <Pane fx:id="backgroundPane" mouseTransparent="true">
+         <!-- Left side circles with larger sizes and varied placements -->
+         <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+         <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+         <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(100,149,237,0.15)" radius="140" />
+         <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+         <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(100,149,237,0.15)" radius="160" />
+         <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(100,149,237,0.15)" radius="130" />
+
+         <!-- Right side circles with larger sizes and creative placements -->
+         <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+         <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+         <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(100,149,237,0.15)" radius="140" />
+         <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+         <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(100,149,237,0.15)" radius="160" />
+         <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(100,149,237,0.15)" radius="130" />
+      </Pane>
+
+      <!-- Main Dashboard Layout -->
+      <HBox prefWidth="5683.0" style="-fx-background-color: transparent;">
+         <!-- Sidebar Navigation -->
+         <VBox style="-fx-background-color: rgba(240,240,240,0.8);                        -fx-pref-width: 250px;                        -fx-max-width: 250px;">
+            <children>
+               <ImageView fitHeight="158.0" fitWidth="135.0" onMouseClicked="#pagedashboard">
+                  <image>
+                     <Image url="@../../../images/logo.png" />
+                  </image>
+                  <VBox.margin>
+                     <Insets bottom="20.0" left="50.0" right="20.0" top="40.0" />
+                  </VBox.margin>
+               </ImageView>
+               <StackPane />
+               <!-- Sidebar Menu Items -->
+               <VBox spacing="10" style="-fx-padding: 0 20px;">
+                  <children>
+                     <Button fx:id="btnDashboard" onAction="#pagedashboard" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Dashboard" />
+
+                     <Button fx:id="btnUser" style="-fx-background-color: rgba(100,149,237,0.2);                        -fx-text-fill: #6495ED;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="User" />
+
+                     <Button fx:id="btnReclamations" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Réclamations" onAction="#pageReclamation" />
+
+                     <Button fx:id="btnBlog" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Blog" />
+
+                     <Button fx:id="btnFinance" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;                        -fx-background-radius: 10px;" text="Finance" />
+
+                     <Button fx:id="btnUtilisateurs" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Bénévolat" onAction="#pageAssociation" />
+                  </children>
+               </VBox>
+
+
+               <Button fx:id="logout" onAction="#logout" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                -fx-background-radius: 50px;                -fx-text-fill: white;                -fx-font-weight: bold;                -fx-font-size: 20px;" text="LOGOUT">
+                  <graphic>
+                     <StackPane>
+                        <Circle fx:id="googleCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                        <Label fx:id="googleLabel" style="-fx-font-size: 24px;                           -fx-text-fill: #6495ED;                           -fx-font-weight: bold;" text="🔓" />
+                     </StackPane>
+                  </graphic>
+                  <effect>
+                     <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                  </effect>
+                  <VBox.margin>
+                     <Insets bottom="15.0" left="20.0" top="130.0" />
+                  </VBox.margin>
+               </Button>
+
+
+
+
+            </children>
+         </VBox>
+
+
+         <!-- Main Content Area -->
+         <VBox style="-fx-background-color: transparent; -fx-pref-width: 100%;">
+
+            <!-- Dashboard Content -->
+            <GridPane hgap="20" style="-fx-padding: 20px;" vgap="20">
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+         </VBox>
+      </HBox>
+      <AnchorPane prefHeight="712.0" prefWidth="5582.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 10;" stylesheets="@../../../css/dashbaord.css">
+         <effect>
+            <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+         </effect>
+         <children>
+            <AnchorPane layoutX="493.0" layoutY="100.0" prefHeight="546.0" prefWidth="723.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+               <effect>
+                  <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+               </effect>
+               <children>
+                  <TableView fx:id="tableView" layoutX="9.0" layoutY="108.0" prefHeight="371.0" prefWidth="705.0" stylesheets="@../../../css/dashbaord.css">
+                     <columns>
+                        <TableColumn fx:id="nomColumn" prefWidth="100.0" text="Nom">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="nom" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="prenomColumn" prefWidth="100.0" text="Prénom">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="prenom" />
+                           </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="email" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="numeroColumn" prefWidth="100.0" text="Phone">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="num_telephone" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="imageUserColumn" prefWidth="119.2000732421875" text="Image User" />
+
+
+                        <TableColumn fx:id="bannedColumn" prefWidth="100.0" text="Banned" />
+                        <TableColumn fx:id="rolsColumn" prefWidth="100.0" text="Role" />
+                        <TableColumn fx:id="actionsColumn" prefWidth="200.0" text="Actions" />
+
+                     </columns>
+                  </TableView>
+
+                  <TextField fx:id="searchField" layoutX="122.0" layoutY="30.0" onKeyReleased="#search" promptText="                             Search User " style="-fx-font-size: 16px; -fx-background-color: #f0f0f0; -fx-text-fill: #6495ED; -fx-prompt-text-fill: #666666; -fx-background-radius: 10px; -fx-border-color: #6495ED; -fx-border-radius: 1000px; -fx-border-width: 2px; -fx-padding: 12px;" AnchorPane.bottomAnchor="459.59999999999997" AnchorPane.topAnchor="30.0">                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="41.0" maxHeight="670.0" maxWidth="476.0" minHeight="670.0" minWidth="468.0" prefHeight="670.0" prefWidth="468.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+
+               <effect>
+                  <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+               </effect>
+               <children>
+                  <TextField fx:id="nom" layoutX="19.0" layoutY="137.0" promptText="Nom" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+                  <Label fx:id="errornom" layoutX="19.0" layoutY="193.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <TextField fx:id="prenom" layoutX="253.0" layoutY="137.0" promptText="Prénom" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+                  <Label fx:id="prenomError" layoutX="253.0" layoutY="193.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <TextField fx:id="email" layoutX="19.0" layoutY="214.0" promptText="Email" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+                  <Label fx:id="emailError" layoutX="19.0" layoutY="280.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <TextField fx:id="numTelephone" layoutX="251.0" layoutY="214.0" promptText="Phone " style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+                  <Label fx:id="numTelephoneError" layoutX="251.0" layoutY="270.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <DatePicker fx:id="dateNaissance" layoutX="19.0" layoutY="299.0" prefHeight="51.0" prefWidth="210.0" promptText="Date de Naissance" style="-fx-font-size: 16px;                    -fx-background-color: #f0f0f0;                    -fx-text-fill: #6495ED;                    -fx-prompt-text-fill: #666666;                    -fx-background-radius: 10px;                    -fx-border-color: #333333;                    -fx-border-radius: 10px;                    -fx-border-width: 2px;                    -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </DatePicker>
+                  <Label fx:id="dateNaissanceError" layoutX="19.0" layoutY="367.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <TextField fx:id="localisation" layoutX="254.0" layoutY="299.0" promptText="Localisation" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </TextField>
+                  <Label fx:id="localisationError" layoutX="254.0" layoutY="365.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <Button fx:id="imageChooserButton" layoutX="58.0" layoutY="385.0" onAction="#chooseImage" style="-fx-font-size: 16px;                                    -fx-background-color: #f0f0f0;                                    -fx-text-fill: #6495ED;                                    -fx-background-radius: 10px;                                    -fx-border-color: #333333;                                    -fx-border-radius: 10px;                                    -fx-border-width: 2px;                                    -fx-padding: 12px;" text="Choisir une Image">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </Button>
+                  <Label fx:id="imagePathLabel" layoutX="233.0" layoutY="402.0" style="-fx-font-size: 14px;                                   -fx-text-fill: #666666;" text="Aucune image sélectionnée" />
+                  <PasswordField fx:id="confirmPassword" layoutX="251.0" layoutY="469.0" promptText="Confirmer le Mot de Passe" style="-fx-font-size: 16px;                                           -fx-background-color: #f0f0f0;                                           -fx-text-fill: #6495ED;                                           -fx-prompt-text-fill: #666666;                                           -fx-background-radius: 10px;                                           -fx-border-color: #333333;                                           -fx-border-radius: 10px;                                           -fx-border-width: 2px;                                           -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </PasswordField>
+                  <Label fx:id="confirmPasswordError" layoutX="251.0" layoutY="528.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <PasswordField fx:id="password" layoutX="19.0" layoutY="476.0" promptText="Mot de Passe" style="-fx-font-size: 16px;                                           -fx-background-color: #f0f0f0;                                           -fx-text-fill: #6495ED;                                           -fx-prompt-text-fill: #666666;                                           -fx-background-radius: 10px;                                           -fx-border-color: #333333;                                           -fx-border-radius: 10px;                                           -fx-border-width: 2px;                                           -fx-padding: 12px;">
+                     <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                     </effect>
+                  </PasswordField>
+                  <Label fx:id="passwordError" layoutX="19.0" layoutY="532.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                  <HBox alignment="CENTER" layoutX="40.0" layoutY="550.0" spacing="15" style="-fx-background-color: transparent;">
+                     <Label style="-fx-font-size: 16px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="Rôle:" />
+                     <RadioButton fx:id="adminRole" style="-fx-text-fill: #6495ED; -fx-font-weight: bold;" text="Admin" />
+                     <RadioButton fx:id="userRole" style="-fx-text-fill: #6495ED; -fx-font-weight: bold;" text="User" />
+                  </HBox>
+                  <Label fx:id="rolesError" layoutX="240.0" layoutY="554.0" text="" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+
+                  <Button fx:id="signinButton" layoutX="107.0" layoutY="590.0" onAction="#signin" prefHeight="55.0" prefWidth="240.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                -fx-background-radius: 50px;                -fx-text-fill: white;                -fx-font-weight: bold;                -fx-font-size: 20px;" text="ADD USER">
+                     <graphic>
+                        <StackPane>
+                           <Circle fx:id="googleCircle1" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                           <Label fx:id="googleLabel2" style="-fx-font-size: 24px;                           -fx-text-fill: #6495ED;                           -fx-font-weight: bold;" text="➕" />
+                        </StackPane>
+                     </graphic>
+                     <effect>
+                        <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="20.0" top="130.0" />
+                     </VBox.margin>
+                  </Button>
+
+
+
+                  <Label layoutX="111.0" layoutY="51.0" style="-fx-font-size: 36px;                               -fx-text-fill: #6495ED;                               -fx-font-weight: bold;" text="👤 Add User ✍">
+                     <effect>
+                        <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="536.0" layoutY="14.0" prefHeight="54.0" prefWidth="313.0" style="-fx-font-size: 36px;                               -fx-text-fill: #6495ED;                               -fx-font-weight: bold;" text="👤 Gestion User ">
+               <effect>
+                  <DropShadow color="#6495ED" radius="10" spread="0.3" />
+               </effect>
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+
+            <ImageView fx:id="imageView" fitHeight="75.0" fitWidth="60.0" layoutX="1121.0" layoutY="14.0" onMouseClicked="#affichertest" />
+         </children>
+         <StackPane.margin>
+            <Insets left="300.0" top="40.0" />
+         </StackPane.margin>
+      </AnchorPane>
+
+   </children>
+</StackPane>

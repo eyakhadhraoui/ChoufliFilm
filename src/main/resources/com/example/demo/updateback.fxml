@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.editcontroller">
+
+    <children>
+        <!-- Animated Background with Exact Circles from Login Page -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with larger sizes and varied placements -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(100,149,237,0.15)" radius="130" />
+
+            <!-- Right side circles with larger sizes and creative placements -->
+            <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(100,149,237,0.15)" radius="130" />
+        </Pane>
+
+        <!-- Main Dashboard Layout -->
+        <HBox prefWidth="5683.0" style="-fx-background-color: transparent;">
+            <!-- Sidebar Navigation -->
+            <VBox style="-fx-background-color: rgba(240,240,240,0.8);                        -fx-pref-width: 250px;                        -fx-max-width: 250px;">
+                <children>
+                    <ImageView fitHeight="158.0" fitWidth="135.0" onMouseClicked="#dashboard">
+                        <image>
+                            <Image url="@../../../images/logo.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets bottom="20.0" left="50.0" right="20.0" top="40.0" />
+                        </VBox.margin>
+                    </ImageView>
+                    <StackPane />
+                    <!-- Sidebar Menu Items -->
+                    <VBox spacing="10" style="-fx-padding: 0 20px;">
+                        <children>
+                            <Button onAction="#dashboard" style="-fx-background-color: transparent;                                            -fx-text-fill: black;                                            -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;" text="Dashboard" />
+                            <Button onAction="#pageuser" style="-fx-background-color: rgba(100,149,237,0.2);                                            -fx-text-fill: #6495ED;                                             -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;" text="User" />
+                            <Button style="-fx-background-color: transparent;                                            -fx-text-fill: black;                                            -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;" text="Réclamations" />
+                            <Button style="-fx-background-color: transparent;                                            -fx-text-fill: black;                                            -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;" text="Blog" />
+                            <Button style="-fx-background-color: transparent;                                            -fx-text-fill: black;                                            -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;                                            -fx-background-radius: 10px;" text="Finance" />
+                            <Button onAction="#pageAssociation" style="-fx-background-color: transparent;                                            -fx-text-fill: black;                                            -fx-font-size: 16px;                                            -fx-alignment: center-left;                                            -fx-pref-width: 210px;                                            -fx-padding: 10px;" text="Bénévolat" />
+                        </children>
+                    </VBox>
+
+                    <Button fx:id="logout" onAction="#logout" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                -fx-background-radius: 50px;                -fx-text-fill: white;                -fx-font-weight: bold;                -fx-font-size: 20px;" text="LOGOUT">
+                        <graphic>
+                            <StackPane>
+                                <Circle fx:id="googleCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                                <Label fx:id="googleLabel" style="-fx-font-size: 24px;                           -fx-text-fill: #6495ED;                           -fx-font-weight: bold;" text="🔓" />
+                            </StackPane>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="15.0" left="20.0" top="130.0" />
+                        </VBox.margin>
+                    </Button>
+
+                </children>
+            </VBox>
+
+
+            <!-- Main Content Area -->
+            <VBox style="-fx-background-color: transparent; -fx-pref-width: 100%;">
+
+                <!-- Dashboard Content -->
+                <GridPane hgap="20" style="-fx-padding: 20px;" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </VBox>
+            <AnchorPane layoutX="500.0" layoutY="100.0" maxHeight="550.0" maxWidth="600.0" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="819.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 15;">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.5)" radius="20" spread="0.1" />
+                </effect>
+                <HBox.margin>
+                    <Insets bottom="20.0" top="150.0" />
+                </HBox.margin>
+                <children>
+                    <!-- Header with dynamic gradient -->
+                    <Rectangle arcHeight="30.0" arcWidth="30.0" height="220.0" width="536.0">
+                        <fill>
+                            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+                                <stops>
+                                    <Stop color="#f0f0f0" />
+                                    <Stop color="#e0e0e0" offset="0.3" />
+                                    <Stop color="#d8d8d8" offset="0.7" />
+                                    <Stop color="#f0f0f0" offset="1.0" />
+                                </stops>
+                            </LinearGradient>
+                        </fill>
+                    </Rectangle>
+
+                    <!-- Decorative accent shapes -->
+                    <Circle centerX="50" centerY="50" fill="rgba(100,149,237,0.5)" opacity="0.05" radius="140" />
+                    <Circle centerX="500" centerY="150" fill="rgba(100,149,237,0.5)" opacity="0.05" radius="100" />
+
+
+                    <!-- Profile Header -->
+                    <VBox alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="200.0" prefWidth="536.0">
+                        <children>
+                            <!-- Profile Image with fancy effects -->
+                            <StackPane>
+                                <!-- Outer glow -->
+                                <Circle fill="transparent" radius="65" stroke="rgba(100,149,237,0.15)" strokeWidth="3">
+                                    <effect>
+                                        <Bloom threshold="0.3" />
+                                    </effect>
+                                </Circle>
+
+                                <!-- Profile background -->
+                                <Circle fill="#f0f0f0" radius="60" stroke="rgba(100,149,237,0.3)" strokeType="INSIDE" strokeWidth="2">
+                                    <effect>
+                                        <InnerShadow choke="0.2" color="#d0d0d0" height="15.0" radius="7.0" width="15.0" />
+                                    </effect>
+                                </Circle>
+
+                                <!-- Clip for profile image -->
+                                <StackPane>
+                                    <Circle fx:id="imageClip" radius="57" />
+                                    <ImageView fx:id="imageView" fitHeight="155.0" fitWidth="135.0" preserveRatio="true">
+                                        <effect>
+                                            <ColorAdjust brightness="0.0" contrast="0.0" />
+                                        </effect>
+                                    </ImageView>
+                                </StackPane>
+                            </StackPane>
+                        </children>
+                    </VBox>
+
+                    <!-- Stylish separator -->
+                    <HBox alignment="CENTER" layoutX="0" layoutY="200" prefWidth="536">
+                        <Group>
+                            <children>
+                                <Line endX="536" endY="0" startX="0" startY="0" stroke="rgba(100,149,237,0.15)" strokeWidth="1" />
+                                <Line endX="318" endY="-10" startX="218" startY="-10" stroke="rgba(100,149,237,0.4)" strokeWidth="2">
+                                    <effect>
+                                        <Glow level="0.3" />
+                                    </effect>
+                                </Line>
+                            </children>
+                        </Group>
+                    </HBox>
+
+                    <!-- User Information Section with hover effects -->
+                    <VBox layoutX="43.0" layoutY="230.0" prefHeight="320.0" prefWidth="487.0" spacing="12.0">
+                        <!-- Name -->
+                        <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="468.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 8; -fx-border-color: rgba(100,149,237,0.2); -fx-border-radius: 8; -fx-border-width: 1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.0, 0, 2);" styleClass="info-box">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <children>
+                                <Rectangle arcHeight="5" arcWidth="5" fill="rgba(100,149,237,0.4)" height="25" width="5">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Rectangle>
+                                <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="NOM : " textFill="#333333">
+                                    <HBox.margin>
+                                        <Insets left="70.0" right="100.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="nomlabel" prefHeight="20.0" prefWidth="161.0" style="-fx-font-size: 14px;" text="EyaKhadhraoui" textFill="#333333" />
+                            </children>
+                        </HBox>
+
+                        <!-- First Name -->
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="450.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 8; -fx-border-color: rgba(100,149,237,0.2); -fx-border-radius: 8; -fx-border-width: 1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.0, 0, 2);" styleClass="info-box">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <children>
+                                <Rectangle arcHeight="5" arcWidth="5" fill="rgba(100,149,237,0.4)" height="25" width="5">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Rectangle>
+                                <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="PRENOM :" textFill="#333333">
+                                    <HBox.margin>
+                                        <Insets left="70.0" right="80.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="prenomlabel" style="-fx-font-size: 14px;" text="Garram" textFill="#333333" />
+                            </children>
+                        </HBox>
+
+                        <!-- Email -->
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="450.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 8; -fx-border-color: rgba(100,149,237,0.2); -fx-border-radius: 8; -fx-border-width: 1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.0, 0, 2);" styleClass="info-box">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <children>
+                                <Rectangle arcHeight="5" arcWidth="5" fill="rgba(100,149,237,0.4)" height="25" width="5">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Rectangle>
+                                <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Email:" textFill="#333333">
+                                    <HBox.margin>
+                                        <Insets left="70.0" right="102.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="emaillabel" style="-fx-font-size: 14px;" text="jean.dupont@example.com" textFill="#333333" />
+                            </children>
+                        </HBox>
+
+                        <!-- Phone Number -->
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="450.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 8; -fx-border-color: rgba(100,149,237,0.2); -fx-border-radius: 8; -fx-border-width: 1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.0, 0, 2);" styleClass="info-box">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <children>
+                                <Rectangle arcHeight="5" arcWidth="5" fill="rgba(100,149,237,0.4)" height="25" width="5">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Rectangle>
+                                <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Téléphone:" textFill="#333333">
+                                    <HBox.margin>
+                                        <Insets left="70.0" right="73.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="tellabel" style="-fx-font-size: 14px;" text="0123456789" textFill="#333333" />
+                            </children>
+                        </HBox>
+
+                        <!-- Address -->
+                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="450.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 8; -fx-border-color: rgba(100,149,237,0.2); -fx-border-radius: 8; -fx-border-width: 1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.0, 0, 2);" styleClass="info-box">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <children>
+                                <Rectangle arcHeight="5" arcWidth="5" fill="rgba(100,149,237,0.4)" height="25" width="5">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Rectangle>
+                                <Label style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Adresse:" textFill="#333333">
+                                    <HBox.margin>
+                                        <Insets left="70.0" right="80.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label fx:id="localisationlabel" style="-fx-font-size: 14px;" text="123 Rue de Paris, 75001 Paris" textFill="#333333" />
+                            </children>
+                        </HBox>
+
+                        <!-- Stylish footer design -->
+                        <StackPane prefHeight="40.0" prefWidth="450.0">
+                            <Rectangle fill="rgba(100,149,237,0.2)" height="2" width="200">
+                                <effect>
+                                    <Glow level="0.2" />
+                                </effect>
+                            </Rectangle>
+                        </StackPane>
+                    </VBox>
+                </children>
+                <style>
+                    /* Add hover effects for info boxes */
+                    .info-box:hover {
+                    -fx-background-color: #e0e0e0;
+                    -fx-border-color: rgba(100,149,237,0.4);
+                    -fx-cursor: hand;
+                    }
+                </style>
+            </AnchorPane>
+
+            <AnchorPane maxHeight="670.0" maxWidth="476.0" minHeight="500.0" minWidth="0.0" prefHeight="660.0" prefWidth="0.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                </effect>
+                <children>
+                    <TextField fx:id="nom" layoutX="50.0" layoutY="137.0" promptText="Nom" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                        <opaqueInsets>
+                            <Insets left="400.0" />
+                        </opaqueInsets>
+                        <padding>
+                            <Insets top="40.0" />
+                        </padding>
+                    </TextField>
+                    <Label fx:id="nomErrorLabel" layoutX="50.0" layoutY="200.0" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                    <TextField fx:id="prenom" layoutX="300.0" layoutY="137.0" promptText="Prénom" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="prenomErrorLabel" layoutX="300.0" layoutY="200.0" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                    <TextField fx:id="email" layoutX="50.0" layoutY="234.0" promptText="Email" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="emailErrorLabel" layoutX="50.0" layoutY="297.0" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+
+                    <TextField fx:id="numTelephone" layoutX="300.0" layoutY="234.0" promptText="Phone " style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+
+                    <TextField fx:id="localisation" layoutX="58.0" layoutY="350.0" prefHeight="54.0" prefWidth="451.0" promptText="                                      Localisation" style="-fx-font-size: 16px;                                       -fx-background-color: #f0f0f0;                                       -fx-text-fill: #6495ED;                                       -fx-prompt-text-fill: #666666;                                       -fx-background-radius: 10px;                                       -fx-border-color: #333333;                                       -fx-border-radius: 10px;                                       -fx-border-width: 2px;                                       -fx-padding: 12px;">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Button fx:id="imageChooserButton" layoutX="70.0" layoutY="480.0" onAction="#chooseImage" style="-fx-font-size: 16px;                                    -fx-background-color: #f0f0f0;                                    -fx-text-fill: #6495ED;                                    -fx-background-radius: 10px;                                    -fx-border-color: #333333;                                    -fx-border-radius: 10px;                                    -fx-border-width: 2px;                                    -fx-padding: 12px;" text="Choisir une Image">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </Button>
+                    <Label fx:id="imagePathLabel" layoutX="300.0" layoutY="500.0" style="-fx-font-size: 14px;                                   -fx-text-fill: #666666;" text="Aucune image sélectionnée" />
+
+                    <Button fx:id="signinButton" layoutX="100.0" layoutY="600.0" maxWidth="135.0" onAction="#edit" prefHeight="51.0" prefWidth="135.0" style="-fx-font-size: 18px;                                -fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                                -fx-text-fill: white;                                -fx-background-radius: 10px;                                -fx-padding: 12px;                                -fx-pref-width: 250px;" text="Update">
+                        <effect>
+                            <DropShadow color="#6495ED" radius="20" spread="0.3" />
+                        </effect>
+                    </Button>
+                    <Label layoutX="111.0" layoutY="51.0" style="-fx-font-size: 36px;                               -fx-text-fill: #6495ED;                               -fx-font-weight: bold;" text="👤 Edit User ✍">
+                        <effect>
+                            <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                        </effect>
+                        <padding>
+                            <Insets bottom="20.0" left="-200.0" right="20.0" />
+                        </padding>
+                    </Label>
+                    <Button fx:id="signinButton1" layoutX="300.0" layoutY="600.0" maxWidth="135.0" onAction="#cancelaffichage" prefHeight="51.0" prefWidth="135.0" style="-fx-font-size: 18px;                                -fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                                -fx-text-fill: white;                                -fx-background-radius: 10px;                                -fx-padding: 12px;                                -fx-pref-width: 250px;" text="Cancel ">
+                        <effect>
+                            <DropShadow color="#6495ED" radius="20" spread="0.3" />
+                        </effect>
+                    </Button>
+                    <Label fx:id="phoneErrorLabel" layoutX="300.0" layoutY="295.0" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+                    <Label fx:id="dateNaissanceErrorLabel" layoutX="60.0" layoutY="420.0" style="-fx-text-fill: #6495ED; -fx-fx-font-size: 12px;" />
+                    <Label fx:id="localisationErrorLabel" layoutX="310.0" layoutY="410.0" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" />
+
+                </children>
+            </AnchorPane>
+        </HBox>
+
+    </children>
+</StackPane>

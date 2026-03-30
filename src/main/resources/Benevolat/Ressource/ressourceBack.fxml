@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.Ressource.backRessourceController">
+
+    <children>
+        <!-- Animated Background with Exact Circles from Login Page -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with larger sizes and varied placements -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(255,51,51,0.15)" radius="150" />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(255,51,51,0.15)" radius="180" />
+            <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(255,51,51,0.15)" radius="140" />
+            <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(255,51,51,0.15)" radius="120" />
+            <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(255,51,51,0.15)" radius="160" />
+            <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(255,51,51,0.15)" radius="130" />
+
+            <!-- Right side circles with larger sizes and creative placements -->
+            <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(255,51,51,0.15)" radius="150" />
+            <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(255,51,51,0.15)" radius="180" />
+            <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(255,51,51,0.15)" radius="140" />
+            <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(255,51,51,0.15)" radius="120" />
+            <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(255,51,51,0.15)" radius="160" />
+            <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(255,51,51,0.15)" radius="130" />
+        </Pane>
+
+        <!-- Main Dashboard Layout -->
+        <HBox prefWidth="5683.0" style="-fx-background-color: transparent;">
+            <!-- Sidebar Navigation -->
+            <VBox style="-fx-background-color: rgba(30,30,30,0.8);                        -fx-pref-width: 250px;                        -fx-max-width: 250px;">
+                <children>
+                    <ImageView fitHeight="158.0" fitWidth="135.0">
+                        <image>
+                            <Image url="@../../images/logo.png" />
+                            <Image url="@../../images/logo.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets bottom="20.0" left="50.0" right="20.0" top="40.0" />
+                        </VBox.margin>
+                    </ImageView>
+                    <StackPane />
+                    <!-- Sidebar Menu Items -->
+                    <VBox spacing="10" style="-fx-padding: 0 20px;">
+                        <children>
+                            <Button fx:id="btnDashboard" onAction="#pagedashboard" style="-fx-background-color: transparent;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Dashboard" />
+
+                            <Button fx:id="btnUser" onAction="#pageuser" style="-fx-background-color: transparent;                        -fx-text-fill: white;                           -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="User" />
+
+                            <Button fx:id="btnReclamations" style="-fx-background-color: transparent;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Réclamations" />
+
+                            <Button fx:id="btnBlog" style="-fx-background-color: transparent;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Blog" />
+
+                            <Button fx:id="btnFinance" style="-fx-background-color: transparent;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;                        -fx-background-radius: 10px;" text="Finance" />
+
+                            <Button fx:id="btnUtilisateurs" onAction="#pageAssociation" style="-fx-background-color: rgba(255,51,51,0.2);                        -fx-text-fill: #ff3333;                     -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Bénévolat" />
+                        </children>
+                    </VBox>
+
+
+                    <Button fx:id="logout" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: linear-gradient(to right, #ff3333, #8B0000);                -fx-background-radius: 50px;                -fx-text-fill: white;                -fx-font-weight: bold;                -fx-font-size: 20px;" text="LOGOUT">
+                        <graphic>
+                            <StackPane>
+                                <Circle fx:id="googleCircle" fill="#FFFFFF" radius="20" stroke="#ff3333" strokeWidth="2" />
+                                <Label fx:id="googleLabel" style="-fx-font-size: 24px;                           -fx-text-fill: #ff3333;                           -fx-font-weight: bold;" text="🔓" />
+                            </StackPane>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="#8B0000" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="15.0" left="20.0" top="130.0" />
+                        </VBox.margin>
+                    </Button>
+
+
+
+
+                </children>
+            </VBox>
+
+
+            <!-- Main Content Area -->
+            <VBox style="-fx-background-color: transparent; -fx-pref-width: 100%;">
+
+                <!-- Dashboard Content -->
+                <GridPane hgap="20" style="-fx-padding: 20px;" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </VBox>
+        </HBox>
+        <AnchorPane prefHeight="712.0" prefWidth="5582.0" style="-fx-background-color: rgba(30,30,30,0.8); -fx-background-radius: 10;" stylesheets="@../../css/dashbaord.css">
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+            </effect>
+            <children>
+                <AnchorPane layoutX="89.0" layoutY="100.0" prefHeight="546.0" prefWidth="1111.0" style="-fx-background-color: rgba(30,30,30,0.8);">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+                        <TableView fx:id="tableView" layoutX="37.0" layoutY="108.0" prefHeight="371.0" prefWidth="1007.0" stylesheets="@../../css/dashbaord.css">
+                            <columns>
+
+                                <TableColumn fx:id="nomColumn" prefWidth="82.39996337890625" text="Nom User" />
+                                <TableColumn fx:id="prenomColumn" prefWidth="104.800048828125" text="Prenom User" />
+                                <TableColumn fx:id="emailColumn" prefWidth="247.20001220703125" text="Email User" />
+                                <TableColumn fx:id="nomAssociationColumn" prefWidth="132.0" text="Nom Association" />
+
+                                <TableColumn fx:id="actionsColumn" prefWidth="125.60003662109375" text="Image Association" />
+                                <TableColumn fx:id="actionsColumn1" prefWidth="119.2000732421875" text="Image User" />
+
+                                <TableColumn fx:id="besoinspec" prefWidth="166.39990234375" text="Besoin Spécifique">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="besoin_specifique" />
+                                    </cellValueFactory>
+                                </TableColumn>
+
+                               </columns>
+                        </TableView>
+
+                           <TextField fx:id="searchField" layoutX="320.0" layoutY="33.0" promptText="                             Search  Ressource" style="-fx-font-size: 16px; -fx-background-color: #1e1e1e; -fx-text-fill: #ff3333; -fx-prompt-text-fill: #666666; -fx-background-radius: 10px; -fx-border-color: #333333; -fx-border-radius: 1000px; -fx-border-width: 2px; -fx-padding: 12px;" AnchorPane.bottomAnchor="458.19999999999993" AnchorPane.topAnchor="33.0">
+                            <effect>
+                                <DropShadow color="rgba(255,51,51,0.2)" radius="15" />
+                            </effect>
+                        </TextField>
+                    </children>
+                </AnchorPane>
+                <Label layoutX="417.0" layoutY="30.0" prefHeight="54.0" prefWidth="406.0" style="-fx-font-size: 36px;                               -fx-text-fill: #ff3333;                               -fx-font-weight: bold;" text="👤 Gestion Ressource">
+                    <effect>
+                        <DropShadow color="#ff3333" radius="10" spread="0.3" />
+                    </effect>
+                    <font>
+                        <Font size="96.0" />
+                    </font>
+                </Label>
+
+                   <ImageView fx:id="imageView" fitHeight="75.0" fitWidth="60.0" layoutX="1121.0" layoutY="14.0" />
+            </children>
+            <StackPane.margin>
+                <Insets left="300.0" top="40.0" />
+            </StackPane.margin>
+        </AnchorPane>
+
+    </children>
+</StackPane>

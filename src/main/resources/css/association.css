@@ -1,0 +1,16 @@
+.text-area {
+    -fx-font-size: 16px;
+    -fx-control-inner-background: #1e1e1e;
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ff3333;
+    -fx-prompt-text-fill: #666666;
+    -fx-background-radius: 10px;
+    -fx-border-color: #333333;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-padding: 12px;
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}

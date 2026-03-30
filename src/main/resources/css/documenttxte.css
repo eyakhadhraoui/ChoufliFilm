@@ -1,0 +1,37 @@
+nomColumn.setCellValueFactory(new PropertyValueFactory<>("nom"));
+        prenomColumn.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+        numeroColumn.setCellValueFactory(new PropertyValueFactory<>("num_telephone"));
+
+        // Définir le bouton "Supprimer" dans la colonne supprimerColumn
+        supprimerColumn.setCellFactory(param -> new TableCell<User, Void>() {
+            private final Button deleteButton = new Button("Supprimer");
+
+            {
+                // Ajouter un événement de clic sur le bouton pour supprimer un utilisateur
+                deleteButton.setOnAction(event -> {
+                    User user = getTableView().getItems().get(getIndex());  // Récupérer l'utilisateur de la ligne
+                    supprimerUtilisateur(user);  // Appeler la méthode de suppression
+                });
+            }
+
+            @Override
+            public void updateItem(Void item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty) {
+                    setGraphic(null);  // Aucune cellule à afficher si vide
+                } else {
+                    setGraphic(deleteButton);  // Ajouter le bouton "Supprimer" dans la cellule
+                }
+            }
+        });
+
+        // Charger les utilisateurs dans la table
+        try {
+            List<User> users = userService.afficherdetailsuser();  // Récupérer la liste des utilisateurs depuis le service
+            ObservableList<User> observableUsers = FXCollections.observableArrayList(users);  // Convertir la liste en ObservableList
+            tableView.setItems(observableUsers);  // Définir les éléments de la table
+        } catch (SQLException e) {
+            e.printStackTrace();  // Gérer l'exception et l'afficher dans la console
+            // Vous pouvez ajouter une gestion d'erreur ici, comme afficher un message d'erreur à l'utilisateur
+        }

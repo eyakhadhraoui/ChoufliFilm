@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.gluonhq.maps.MapView?>
+
+<StackPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="tn.chouflifilm.controller.user.mapcontroller"
+        fx:id="mapContainer"
+        prefHeight="400"
+        prefWidth="400">
+
+    <VBox fx:id="address" spacing="10" alignment="CENTER"
+           prefWidth="300" prefHeight="300"
+           minWidth="300" minHeight="300"
+           maxWidth="300" maxHeight="300">
+    <!-- La MapView sera ajoutée ici dans le contrôleur -->
+</VBox>
+
+
+</StackPane>

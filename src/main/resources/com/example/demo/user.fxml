@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.StatistiquesController">
+    <children>
+        <!-- Animated Background with Exact Circles from Login Page -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with updated colors -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <!-- (Rest of the circles with same blue color) -->
+        </Pane>
+
+        <!-- Main Dashboard Layout -->
+        <HBox prefWidth="5683.0" style="-fx-background-color: transparent;">
+            <!-- Sidebar Navigation -->
+            <VBox style="-fx-background-color: rgba(240,240,240,0.8);                        -fx-pref-width: 250px;                        -fx-max-width: 250px;">
+                <children>
+                    <ImageView fitHeight="158.0" fitWidth="135.0">
+                        <image>
+                            <Image url="@../../../images/logo.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets bottom="20.0" left="50.0" right="20.0" top="40.0" />
+                        </VBox.margin>
+                    </ImageView>
+
+                    <!-- Sidebar Menu Items -->
+                    <VBox spacing="10" style="-fx-padding: 0 20px;">
+                        <children>
+                            <Button fx:id="btnDashboard" style="-fx-background-color: rgba(100,149,237,0.2);                        -fx-text-fill: #6495ED;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Dashboard" />
+
+                            <Button fx:id="btnUser" onAction="#pageuser" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="User" />
+
+                            <Button fx:id="btnReclamations" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Réclamations"  onAction="#pageReclamation"/>
+
+                            <Button fx:id="btnBlog" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Blog" />
+
+                            <Button fx:id="btnFinance" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;                        -fx-background-radius: 10px;" text="Finance" />
+
+                            <Button fx:id="btnUtilisateurs" style="-fx-background-color: transparent;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-font-family: 'Arial';                        -fx-alignment: center-left;                        -fx-pref-width: 210px;                        -fx-padding: 12px;" text="Bénévolat" onAction="#pageAssociation" />
+                        </children>
+                    </VBox>
+
+                    <Button fx:id="logout" onAction="#logout" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                -fx-background-radius: 50px;                -fx-text-fill: white;                -fx-font-weight: bold;                -fx-font-size: 20px;" text="LOGOUT">
+                        <graphic>
+                            <StackPane>
+                                <Circle fx:id="googleCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                                <Label fx:id="googleLabel" style="-fx-font-size: 24px;                           -fx-text-fill: #6495ED;                           -fx-font-weight: bold;" text="🔓" />
+                            </StackPane>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="15.0" left="20.0" top="130.0" />
+                        </VBox.margin>
+                    </Button>
+
+                </children>
+            </VBox>
+
+            <!-- Main Content Area -->
+            <VBox style="-fx-background-color: transparent; -fx-pref-width: 100%;" stylesheets="@../../../css/charts-style.css">
+
+                <!-- Dashboard Content -->
+                <GridPane hgap="20" style="-fx-padding: 20px;" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </VBox>
+        </HBox>
+        <AnchorPane prefHeight="580.0" prefWidth="5227.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 10;">
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+            </effect>
+            <children>
+                <AnchorPane prefHeight="134.0" prefWidth="1233.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+
+                        <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="120.0" prefWidth="253.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 10;">
+                            <effect>
+                                <DropShadow color="#6495ED" radius="10" spread="0.2" />
+                            </effect>
+                            <children>
+                                <Label layoutX="74.0" layoutY="84.0" style="-fx-text-fill: #6495ED;" text="Total Users">
+                                    <font>
+                                        <Font name="Tahoma" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="home_totalEnrolled" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="14.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="0">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="50" fitWidth="50" layoutX="10.0" layoutY="10.0">
+                                    <image>
+
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="home_totalEnrolled1" alignment="CENTER_RIGHT" layoutX="5.0" layoutY="35.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="200,159">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="310.0" layoutY="7.0" prefHeight="120.0" prefWidth="253.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 10;">
+                            <effect>
+                                <DropShadow color="#6495ED" radius="10" spread="0.2" />
+                            </effect>
+                            <children>
+                                <Label layoutX="56.0" layoutY="86.0" prefHeight="19.0" prefWidth="175.0" style="-fx-text-fill: #6495ED;" text="Banned User">
+                                    <font>
+                                        <Font name="Tahoma" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="home_totalFemale" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="16.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="0">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="home_totalEnrolled11" alignment="CENTER_RIGHT" layoutX="13.0" layoutY="37.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="99,129">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="610.0" layoutY="7.0" prefHeight="120.0" prefWidth="253.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 10;">
+                            <effect>
+                                <DropShadow color="#6495ED" radius="10" spread="0.2" />
+                            </effect>
+                            <children>
+                                <Label layoutX="56.0" layoutY="86.0" prefHeight="19.0" prefWidth="175.0" style="-fx-text-fill: #6495ED;" text="Today's Gain">
+                                    <font>
+                                        <Font name="Tahoma" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="home_totalMale" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="16.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="0">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="home_totalEnrolled111" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="37.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="129,000">
+                                    <font>
+                                        <Font name="Berlin Sans FB" size="25.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="910.0" layoutY="7.0" prefHeight="120.0" prefWidth="253.0" style="-fx-background-color: #f0f0f0; -fx-background-radius: 10;">
+                    <effect>
+                        <DropShadow color="#6495ED" radius="10" spread="0.2" />
+                    </effect>
+                    <children>
+                        <Label layoutX="104.0" layoutY="86.0" prefHeight="19.0" prefWidth="135.0" style="-fx-text-fill: #6495ED;" text="Films">
+                            <font>
+                                <Font name="Tahoma" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="home_totalFemale1" alignment="CENTER_RIGHT" layoutX="83.0" layoutY="16.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="0">
+                            <font>
+                                <Font name="Berlin Sans FB" size="25.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="home_totalEnrolled1111" alignment="CENTER_RIGHT" layoutX="5.0" layoutY="45.0" prefHeight="29.0" prefWidth="156.0" style="-fx-text-fill: #6495ED;" text="7,215">
+                            <font>
+                                <Font name="Berlin Sans FB" size="25.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="14.0" layoutY="166.0" prefHeight="462.0" prefWidth="382.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+                        <BarChart fx:id="home_totalEnrolledChart" layoutX="-9.0" layoutY="8.0" prefHeight="558.0" prefWidth="382.0" style="-fx-text-fill: #6495ED;" title="Banned Users">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" style="-fx-tick-label-fill: #6495ED;" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" style="-fx-tick-label-fill: #6495ED;" />
+                            </yAxis>
+                        </BarChart>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="413.0" layoutY="166.0" prefHeight="218.0" prefWidth="818.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+                        <AreaChart fx:id="home_totalFemaleChart" layoutX="63.0" layoutY="1.0" prefHeight="150.0" prefWidth="677.0" style="-fx-text-fill: #6495ED;" title="Enrolled Female Chart" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="1.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" style="-fx-tick-label-fill: #6495ED;" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" style="-fx-tick-label-fill: #6495ED;" />
+                            </yAxis>
+                        </AreaChart>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="421.0" layoutY="430.0" prefHeight="239.0" prefWidth="818.0" style="-fx-background-color: rgba(240,240,240,0.8);">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+                        <LineChart fx:id="home_totalMaleChart" layoutY="21.0" prefHeight="218.0" prefWidth="739.0" style="-fx-text-fill: #6495ED;" title="Enrolled Male Chart" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="79.20000000000005" AnchorPane.topAnchor="21.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" style="-fx-tick-label-fill: #6495ED;" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" style="-fx-tick-label-fill: #6495ED;" />
+                            </yAxis>
+                        </LineChart>
+                    </children>
+                </AnchorPane>
+            </children>
+            <StackPane.margin>
+                <Insets left="300.0" top="40.0" />
+            </StackPane.margin>
+        </AnchorPane>
+    </children>
+</StackPane>

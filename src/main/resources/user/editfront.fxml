@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.editFrontController">
+    <stylesheets>
+        <URL value="@../css/reclamation.css" />
+    </stylesheets>
+
+    <top>
+        <!-- Navigation Bar with Enhanced Professional Design -->
+        <VBox spacing="0" style="-fx-background-color: transparent;">
+            <!-- Top Info Bar with Refined Blue Gradient -->
+            <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: linear-gradient(to right, #1a4d8c, #2c7dd9); -fx-background-radius: 0 0 20 20;" styleClass="top-info-bar">
+                <padding>
+                    <Insets bottom="10" left="25" right="25" top="10" />
+                </padding>
+
+                <Label style="-fx-text-fill: #ffffff; -fx-font-weight: 600; -fx-font-family: 'Segoe UI';" styleClass="info-text" text="123 Esprit, Elghazela, Tunisie">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16">
+                            <Image url="@icons/location-pin.png" />
+                            <effect>
+                                <Bloom threshold="0.25" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.2" />
+                    </effect>
+                </Label>
+
+                <Label style="-fx-text-fill: #ffffff; -fx-font-weight: 600; -fx-font-family: 'Segoe UI';" styleClass="info-text" text="+216 24 705 213">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16">
+                            <Image url="@icons/phone-call.png" />
+                            <effect>
+                                <Bloom threshold="0.25" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.2" />
+                    </effect>
+                </Label>
+
+                <Label style="-fx-text-fill: #ffffff; -fx-font-weight: 600; -fx-font-family: 'Segoe UI';" styleClass="info-text" text="ChouFliFilm@gmail.com">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16">
+                            <Image url="@icons/email-envelope.png" />
+                            <effect>
+                                <Bloom threshold="0.25" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Glow level="0.2" />
+                    </effect>
+                </Label>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Social Media Icons with Elevated Design -->
+                <HBox alignment="CENTER_RIGHT" spacing="12">
+                    <Button style="-fx-background-color: rgba(255,255,255,0.18); -fx-background-radius: 50%; -fx-min-width: 32px; -fx-min-height: 32px; -fx-max-width: 32px; -fx-max-height: 32px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/twitter.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.25)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.18); -fx-background-radius: 50%; -fx-min-width: 32px; -fx-min-height: 32px; -fx-max-width: 32px; -fx-max-height: 32px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/facebook.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.25)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.18); -fx-background-radius: 50%; -fx-min-width: 32px; -fx-min-height: 32px; -fx-max-width: 32px; -fx-max-height: 32px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/linkedin.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.25)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.18); -fx-background-radius: 50%; -fx-min-width: 32px; -fx-min-height: 32px; -fx-max-width: 32px; -fx-max-height: 32px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/instagram.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.25)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                    <Button style="-fx-background-color: rgba(255,255,255,0.18); -fx-background-radius: 50%; -fx-min-width: 32px; -fx-min-height: 32px; -fx-max-width: 32px; -fx-max-height: 32px;" styleClass="social-btn">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/youtube.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(0,0,0,0.25)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                </HBox>
+            </HBox>
+
+            <!-- Main Navigation with Premium Glassmorphism Effect -->
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1000.0" spacing="18" style="-fx-background-color: rgba(245, 250, 255, 0.92); -fx-background-radius: 0 0 30 30; -fx-border-color: rgba(200, 220, 240, 0.5); -fx-border-width: 0 0 1 0;" styleClass="main-nav">
+                <padding>
+                    <Insets bottom="15" left="25" right="25" top="15" />
+                </padding>
+
+                <!-- Logo with Premium Glow Effect -->
+                <StackPane>
+                    <ImageView fitHeight="70.0" fitWidth="150.0" styleClass="logo" onMouseClicked="#pageFront">
+                        <image >
+                            <Image url="@../images/logo.png"  />
+                        </image>
+                    </ImageView>
+                    <effect>
+                        <Glow level="0.3">
+                            <input>
+                                <DropShadow color="#2c7dd9" height="15" radius="7" spread="0.05" width="15" />
+                            </input>
+                        </Glow>
+                    </effect>
+                </StackPane>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <!-- Navigation Buttons with Elegant Design -->
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="Home">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="About">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="Films">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="Bénévolat" onAction="#pageassociation">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="Réclamations" onAction="#pageReclamation">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+
+                <!-- Active Navigation Button with Premium Effect -->
+
+                <Button style="-fx-background-color: transparent; -fx-text-fill: #1a4d8c; -fx-font-size: 14px; -fx-font-weight: 600; -fx-font-family: 'Segoe UI'; -fx-padding: 8 18; -fx-border-radius: 22; -fx-background-radius: 22;" styleClass="nav-btn" text="Blogs">
+                    <effect>
+                        <DropShadow color="rgba(42,82,152,0.1)" height="5" radius="2" width="5" />
+                    </effect>
+                </Button>
+
+                <!-- Cart Button with Premium 3D Effect -->
+                <Button style="-fx-background-color: rgba(220,230,240,0.9); -fx-text-fill: #1a4d8c; -fx-font-weight: 600; -fx-background-radius: 22; -fx-padding: 8 18; -fx-font-family: 'Segoe UI';" styleClass="cart-btn" text="Panier">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16">
+                            <Image url="@icons/shopping-cart.png" />
+                            <effect>
+                                <ColorAdjust brightness="0.1" contrast="0.2" hue="0.05" saturation="0.2" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <DropShadow color="rgba(26,77,140,0.2)" height="8.0" radius="3.5" width="8.0" />
+                    </effect>
+                </Button>
+
+                <!-- Notification Button with Premium Look -->
+                <StackPane>
+                    <Button style="-fx-background-color: rgba(220,230,240,0.9); -fx-background-radius: 50%; -fx-min-width: 38px; -fx-min-height: 38px; -fx-max-width: 38px; -fx-max-height: 38px;" styleClass="notification-btn">
+                        <graphic>
+                            <ImageView fitHeight="18" fitWidth="18">
+                                <Image url="@icons/notification-bell.png" />
+                                <effect>
+                                    <ColorAdjust brightness="0.1" contrast="0.2" hue="0.05" saturation="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(26,77,140,0.2)" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+                    <Label style="-fx-background-color: #2c7dd9; -fx-text-fill: white; -fx-background-radius: 50%; -fx-min-width: 18px; -fx-min-height: 18px; -fx-alignment: center; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-font-size: 10px;" styleClass="notification-count" text="0">
+                        <StackPane.margin>
+                            <Insets left="20.0" top="-20.0" />
+                        </StackPane.margin>
+                    </Label>
+                </StackPane>
+                <ImageView fx:id="imageView" fitHeight="42.0" fitWidth="42.0" />
+
+                <!-- Logout Button with Premium Gradient -->
+                <Button style="-fx-background-color: linear-gradient(to right, #1a4d8c, #2c7dd9); -fx-text-fill: white; -fx-font-weight: 600; -fx-background-radius: 22; -fx-padding: 8 18; -fx-font-family: 'Segoe UI';" styleClass="logout-btn" text="Logout" onAction="#logout">
+                    <graphic>
+                        <ImageView fitHeight="14" fitWidth="14">
+                            <Image url="@icons/logout.png" />
+                            <effect>
+                                <Bloom threshold="0.2" />
+                            </effect>
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <DropShadow color="#1a4d8c" height="8" radius="3.5" width="8" />
+                    </effect>
+                </Button>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <!-- Main Content Area with Clean Background -->
+        <StackPane style="-fx-background-color: linear-gradient(to bottom right, #f0f4f9, #ffffff);" styleClass="main-content-area">
+            <!-- Background Image with Subtle Effect -->
+            <ImageView fitHeight="500" fitWidth="1000" preserveRatio="false" styleClass="hero-background">
+                <Image url="@../images/back.png" />
+                <effect>
+                    <GaussianBlur radius="2.0">
+                        <input>
+                            <ColorAdjust brightness="0.05" contrast="0.1" hue="0.02" saturation="-0.1" />
+                        </input>
+                    </GaussianBlur>
+                </effect>
+            </ImageView>
+
+            <!-- Overlay with Professional White-Blue Gradient -->
+            <Rectangle height="693.0" width="1000.0">
+                <fill>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop>
+                                <color>
+                                    <Color red="0.95" green="0.97" blue="1.0" opacity="0.92" />
+                                </color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" opacity="0.85" />
+                                </color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </fill>
+            </Rectangle>
+
+            <!-- Réclamation Form with Premium Glassmorphism -->
+            <VBox fx:id="reclamationContainer" alignment="CENTER" maxHeight="638.0" maxWidth="900.0" minHeight="600.0" minWidth="700.0" prefHeight="638.0" prefWidth="900.0" spacing="25" style="-fx-background-color: rgba(255, 255, 255, 0.85); -fx-background-radius: 20; -fx-border-color: rgba(200, 220, 240, 0.6); -fx-border-width: 1; -fx-border-radius: 20;" styleClass="form-container">
+                <effect>
+                    <DropShadow color="rgba(26,77,140,0.2)" height="20" radius="9.5" width="20" />
+                </effect>
+                <padding>
+                    <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+                </padding>
+
+                <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: linear-gradient(to right, #1a4d8c, #2c7dd9); -fx-font-family: 'Segoe UI';" text="Modifier Profil" />
+
+                <VBox maxHeight="591.0" maxWidth="890.0" minHeight="351.0" minWidth="800.0" prefHeight="351.0" prefWidth="800.0" spacing="10" style="-fx-background-color: rgba(240, 245, 250, 0.5); -fx-background-radius: 15; -fx-border-color: rgba(200, 220, 240, 0.5); -fx-border-width: 1; -fx-border-radius: 15;" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                        <Label prefHeight="59.0" prefWidth="314.0" style="-fx-text-fill: #f0f5fa; -fx-font-family: 'Segoe UI'; -fx-font-size: 32px; -fx-font-weight: 700;" styleClass="form-title" text="Edit User">
+                            <effect>
+                                <DropShadow color="#2a5298" height="15" radius="7" spread="0.1" width="15">
+                                    <input>
+                                        <Glow level="0.3" />
+                                    </input>
+                                </DropShadow>
+                            </effect>
+                            <padding>
+                                <Insets bottom="20" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets left="300.0" />
+                            </VBox.margin>
+                        </Label>
+                        <VBox spacing="10">
+
+                            <!-- Nom et Prénom -->
+                            <HBox alignment="CENTER_LEFT" spacing="20">
+                                <VBox spacing="2">
+                                    <TextField fx:id="nomTextField" prefHeight="30.0" prefWidth="324.0" promptText="Nom" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2c7dd9; -fx-border-radius: 10; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: #1a4d8c;" />
+                                    <Label fx:id="nomErrorLabel" text="" style="-fx-text-fill: #FF6B6B; -fx-font-size: 12px;" />
+                                </VBox>
+                                <VBox spacing="2">
+                                    <TextField fx:id="prenomTextField" prefHeight="30.0" prefWidth="407.0" promptText="Prénom" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2c7dd9; -fx-border-radius: 10; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: #1a4d8c;" />
+                                    <Label fx:id="prenomErrorLabel" text="" style="-fx-text-fill: #FF6B6B; -fx-font-size: 12px;" />
+                                </VBox>
+                            </HBox>
+
+                            <!-- Email et Téléphone -->
+                            <HBox alignment="CENTER_LEFT" spacing="20">
+                                <VBox spacing="2">
+                                    <TextField fx:id="emailTextField" prefHeight="14.0" prefWidth="322.0" promptText="Email" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2c7dd9; -fx-border-radius: 10; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: #1a4d8c;">
+                                        <HBox.margin>
+                                            <Insets top="40.0" />
+                                        </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="emailErrorLabel" text="" style="-fx-text-fill: #FF6B6B; -fx-font-size: 12px;" />
+                                </VBox>
+                                <VBox spacing="2">
+                                    <TextField fx:id="phoneTextField" prefHeight="30.0" prefWidth="408.0" promptText="Téléphone" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2c7dd9; -fx-border-radius: 10; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: #1a4d8c;">
+                                        <HBox.margin>
+                                            <Insets top="40.0" />
+                                        </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="phoneErrorLabel" text="" style="-fx-text-fill: #FF6B6B; -fx-font-size: 12px;" />
+                                </VBox>
+                            </HBox>
+
+                            <!-- Localisation -->
+                            <VBox spacing="2">
+                                <TextField fx:id="localisationTextField" prefHeight="30.0" prefWidth="657.0" promptText="Localisation" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #2c7dd9; -fx-border-radius: 10; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: #1a4d8c;">
+                                    <VBox.margin>
+                                        <Insets top="40.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <Label fx:id="localisationErrorLabel" text="" style="-fx-text-fill: #FF6B6B; -fx-font-size: 12px;" />
+                            </VBox>
+
+                            <!-- Image Chooser -->
+                            <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-padding: 10 0 0 0;">
+                                <Button fx:id="imageChooserButton" onAction="#chooseImage" prefHeight="46.0" prefWidth="277.0" style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-background-color: linear-gradient(to right, #2C3E50, #4CA1AF); -fx-text-fill: white; -fx-background-radius: 10; -fx-padding: 12;" text="Choisir une Image">
+                                    <graphic>
+                                        <ImageView fitHeight="18" fitWidth="18">
+                                            <Image url="@icons/upload-image.png" />
+                                            <effect>
+                                                <Bloom threshold="0.2" />
+                                            </effect>
+                                        </ImageView>
+                                    </graphic>
+                                    <effect>
+                                        <DropShadow color="rgba(0, 0, 0, 0.4)" height="12" radius="5.5" width="12" />
+                                    </effect>
+                                    <HBox.margin>
+                                        <Insets top="40.0" />
+                                    </HBox.margin>
+                                </Button>
+
+                                <Label fx:id="imagePathLabel" prefHeight="22.0" prefWidth="222.0" style="-fx-font-size: 15px; -fx-text-fill: #a0a0a0;" text="Aucune image sélectionnée">
+                                    <effect>
+                                        <Glow level="0.1" />
+                                    </effect>
+                                    <HBox.margin>
+                                        <Insets left="40.0" top="40.0" />
+                                    </HBox.margin>
+                                </Label>
+                            </HBox>
+                        </VBox>
+                    </children>
+                </VBox>
+
+
+
+            <!-- Action Buttons -->
+                <HBox alignment="CENTER" spacing="15">
+                    <Button onAction="#edit" style="-fx-background-color: linear-gradient(to right, #1a4d8c, #2c7dd9); -fx-text-fill: white; -fx-font-weight: 600; -fx-background-radius: 22; -fx-padding: 10 25; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" text="Mettre à jour" >
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/add-document.png" />
+                                <effect>
+                                    <Bloom threshold="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="#1a4d8c" height="8" radius="3.5" width="8" />
+                        </effect>
+                    </Button>
+
+                    <Button style="-fx-background-color: rgba(220,230,240,0.9); -fx-text-fill: #1a4d8c; -fx-font-weight: 600; -fx-background-radius: 22; -fx-padding: 10 25; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" text="Actualiser">
+                        <graphic>
+                            <ImageView fitHeight="16" fitWidth="16">
+                                <Image url="@icons/refresh.png" />
+                                <effect>
+                                    <ColorAdjust brightness="0.1" contrast="0.2" hue="0.05" saturation="0.2" />
+                                </effect>
+                            </ImageView>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="rgba(26,77,140,0.15)" height="6" radius="2.5" width="6" />
+                        </effect>
+                    </Button>
+                </HBox>
+
+                <StackPane.margin>
+                    <Insets bottom="50.0" top="30.0" />
+                </StackPane.margin>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Footer with subtle gradient -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to right, rgba(26,77,140,0.95), rgba(44,125,217,0.95)); -fx-padding: 12px;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 12px; -fx-font-family: 'Segoe UI';" text="© 2025 ChouFliFilm. Tous droits réservés." />
+        </HBox>
+    </bottom>
+</BorderPane>

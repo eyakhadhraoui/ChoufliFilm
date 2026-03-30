@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.testcontroller"
+
+        >
+
+
+    <children>
+        <!-- Animated Background with Dynamic Shapes -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with larger sizes and varied placements -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(100,149,237,0.15)" radius="130" />
+
+            <!-- Right side circles with larger sizes and creative placements -->
+            <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(100,149,237,0.15)" radius="130" />
+        </Pane>
+
+
+        <!-- Sign-up Container -->
+        <VBox alignment="CENTER" maxHeight="930.0" maxWidth="661.0" minHeight="720.0" minWidth="20.0" prefHeight="930.0" prefWidth="800.0" spacing="20" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 20px; -fx-padding: 40px; -fx-max-width: 600px; -fx-max-height: 600px;">
+
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.5)" radius="30" />
+            </effect>
+
+            <children>
+
+                <Label style="-fx-font-size: 36px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="👤 Inscription ✍">
+
+                    <effect>
+                        <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                    </effect>
+                </Label>
+
+                <!-- Grid Layout for Compact, Professional Design -->
+                <GridPane hgap="15" style="-fx-max-width: 500px;" vgap="15">
+
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+
+                    <TextField fx:id="nom" promptText="Nom" style="-fx-font-size: 16px;                                        -fx-background-color: #f0f0f0;                                        -fx-text-fill: #6495ED;                                        -fx-prompt-text-fill: #666666;                                        -fx-background-radius: 10px;                                        -fx-border-color: #6495ED;                                        -fx-border-radius: 10px;                                        -fx-border-width: 2px;                                        -fx-padding: 12px;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="errornom" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                    <TextField fx:id="prenom" promptText="Prénom" style="-fx-font-size: 16px;                                        -fx-background-color: #f0f0f0;                                        -fx-text-fill: #6495ED;                                        -fx-prompt-text-fill: #666666;                                        -fx-background-radius: 10px;                                        -fx-border-color: #6495ED;                                        -fx-border-radius: 10px;                                        -fx-border-width: 2px;                                        -fx-padding: 12px;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="prenomError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <TextField fx:id="email" promptText="Email" style="-fx-font-size: 16px;                                        -fx-background-color: #f0f0f0;                                        -fx-text-fill: #6495ED;                                        -fx-prompt-text-fill: #666666;                                        -fx-background-radius: 10px;                                        -fx-border-color: #6495ED;                                        -fx-border-radius: 10px;                                        -fx-border-width: 2px;                                        -fx-padding: 12px;" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="emailError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                    <TextField fx:id="numTelephone" promptText="Numéro de Téléphone" style="-fx-font-size: 16px;                                        -fx-background-color: #f0f0f0;                                        -fx-text-fill: #6495ED;                                        -fx-prompt-text-fill: #666666;                                        -fx-background-radius: 10px;                                        -fx-border-color: #6495ED;                                        -fx-border-radius: 10px;                                        -fx-border-width: 2px;                                        -fx-padding: 12px;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="numTelephoneError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <Label fx:id="dateNaissanceError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                    <TextField fx:id="localisation" promptText="Localisation" style="-fx-font-size: 16px;                                        -fx-background-color: #f0f0f0;                                        -fx-text-fill: #6495ED;                                        -fx-prompt-text-fill: #666666;                                        -fx-background-radius: 10px;                                        -fx-border-color: #6495ED;                                        -fx-border-radius: 10px;                                        -fx-border-width: 2px;                                        -fx-padding: 12px;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </TextField>
+                    <Label fx:id="localisationError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <DatePicker fx:id="dateNaissance" prefHeight="51.0" prefWidth="210.0" promptText="Date de Naissance" style="-fx-font-size: 16px;                     -fx-background-color: #f0f0f0;                     -fx-text-fill: #6495ED;                     -fx-prompt-text-fill: #666666;                     -fx-background-radius: 10px;                     -fx-border-color: #6495ED;                     -fx-border-radius: 10px;                     -fx-border-width: 2px;                     -fx-padding: 12px;" GridPane.rowIndex="4">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </DatePicker>
+
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="20" minHeight="10" prefHeight="15" />
+                        <RowConstraints />
+                        <RowConstraints maxHeight="20" minHeight="10" prefHeight="15" />
+                        <RowConstraints />
+                        <RowConstraints maxHeight="20" minHeight="10" prefHeight="15" />
+                    </rowConstraints>
+                </GridPane>
+
+                <!-- File Chooser Section -->
+                <HBox alignment="CENTER" spacing="15">
+                    <Button fx:id="imageChooserButton" onAction="#chooseImage" style="-fx-font-size: 16px;                                     -fx-background-color: #f0f0f0;                                     -fx-text-fill: #6495ED;                                     -fx-background-radius: 10px;                                     -fx-border-color: #6495ED;                                     -fx-border-radius: 10px;                                     -fx-border-width: 2px;                                     -fx-padding: 12px;" text="Choisir une Image">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </Button>
+                    <Label fx:id="imagePathLabel" style="-fx-font-size: 14px; -fx-text-fill: #666666;" text="Aucune image sélectionnée">
+                    </Label>
+                </HBox>
+                <Label fx:id="imageError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" />
+
+                <!-- Password Section -->
+                <GridPane hgap="15" style="-fx-max-width: 500px;" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+
+                    <PasswordField fx:id="password" promptText="Mot de Passe" style="-fx-font-size: 16px;                                            -fx-background-color: #f0f0f0;                                            -fx-text-fill: #6495ED;                                            -fx-prompt-text-fill: #666666;                                            -fx-background-radius: 10px;                                            -fx-border-color: #6495ED;                                            -fx-border-radius: 10px;                                            -fx-border-width: 2px;                                            -fx-padding: 12px;" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </PasswordField>
+                    <Label fx:id="passwordError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                    <PasswordField fx:id="confirmPassword" promptText="Confirmer le Mot de Passe" style="-fx-font-size: 16px;                                            -fx-background-color: #f0f0f0;                                            -fx-text-fill: #6495ED;                                            -fx-prompt-text-fill: #666666;                                            -fx-background-radius: 10px;                                            -fx-border-color: #6495ED;                                            -fx-border-radius: 10px;                                            -fx-border-width: 2px;                                            -fx-padding: 12px;" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <effect>
+                            <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                        </effect>
+                    </PasswordField>
+                    <Label fx:id="confirmPasswordError" style="-fx-text-fill: #6495ED; -fx-font-size: 12px;" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints maxHeight="20" minHeight="10" prefHeight="15" />
+                    </rowConstraints>
+                </GridPane>
+
+
+                <Button fx:id="signinButton" onAction="#signin" style="-fx-font-size: 18px;                                 -fx-background-color: linear-gradient(to right, #6495ED, #4169E1);                                 -fx-text-fill: white;                                 -fx-background-radius: 10px;                                 -fx-padding: 12px;                                 -fx-pref-width: 250px;" text="S'inscrire">
+                    <effect>
+                        <DropShadow color="#4169E1" radius="20" spread="0.3" />
+                    </effect>
+                </Button>
+
+                <HBox alignment="CENTER" spacing="20">
+                    <Hyperlink fx:id="pageConnexion" onAction="#pagelogin" style="-fx-font-size: 14px;                                        -fx-text-fill: #6495ED;                                        -fx-underline: true;" text="Déjà un compte? Connexion" />
+                </HBox>
+
+                <Label fx:id="errorMessageLabel" style="-fx-font-size: 14px; -fx-text-fill: #6495ED; -fx-opacity: 0;" />
+            </children>
+        </VBox>
+    </children>
+</StackPane>

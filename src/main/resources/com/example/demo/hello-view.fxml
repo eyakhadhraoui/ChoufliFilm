@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.user.signincontroller">
+    <children>
+        <!-- Animated Background with Dynamic Shapes -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with larger sizes and varied placements -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150"   />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180"   />
+            <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(100,149,237,0.15)" radius="140"   />
+            <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(100,149,237,0.15)" radius="120"   />
+            <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(100,149,237,0.15)" radius="160"   />
+            <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(100,149,237,0.15)" radius="130"   />
+
+            <!-- Right side circles with larger sizes and creative placements -->
+            <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(100,149,237,0.15)" radius="150"   />
+            <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(100,149,237,0.15)" radius="180"   />
+            <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(100,149,237,0.15)" radius="140"   />
+            <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(100,149,237,0.15)" radius="120"   />
+            <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(100,149,237,0.15)" radius="160"  />
+            <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(100,149,237,0.15)" radius="130" />
+        </Pane>
+
+        <!-- Login Container -->
+        <VBox alignment="CENTER" spacing="25" style="-fx-background-color: rgba(240,240,240,0.8);
+                      -fx-background-radius: 20px;
+                      -fx-padding: 40px;
+                      -fx-max-width: 380px;
+                      -fx-max-height: 500px;">
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.5)" radius="30" />
+            </effect>
+
+            <children>
+                <!-- Title -->
+                <Label style="-fx-font-size: 36px;
+                               -fx-text-fill: #6495ED;
+                               -fx-font-weight: bold;" text="Choufli Film">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                    <effect>
+                        <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                    </effect>
+                </Label>
+
+                <!-- Email Field -->
+                <TextField fx:id="email" promptText="Email" style="-fx-font-size: 16px;
+                                   -fx-background-color: #f0f0f0;
+                                   -fx-text-fill: #6495ED;
+                                   -fx-prompt-text-fill: #666666;
+                                   -fx-background-radius: 10px;
+                                   -fx-border-color: #333333;
+                                   -fx-border-radius: 10px;
+                                   -fx-border-width: 2px;
+                                   -fx-padding: 12px;">
+                    <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                    </effect>
+                </TextField>
+
+                <!-- Password Field -->
+                <PasswordField fx:id="password" promptText="Mot de Passe" style="-fx-font-size: 16px;
+                                       -fx-background-color: #f0f0f0;
+                                       -fx-text-fill: #6495ED;
+                                       -fx-prompt-text-fill: #666666;
+                                       -fx-background-radius: 10px;
+                                       -fx-border-color: #333333;
+                                       -fx-border-radius: 10px;
+                                       -fx-border-width: 2px;
+                                       -fx-padding: 12px;">
+                    <effect>
+                        <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                    </effect>
+                </PasswordField>
+
+                <!-- Login Button -->
+                <Button fx:id="signinButton"
+                        onAction="#signin"
+                        prefHeight="60.0"
+                        prefWidth="250.0"
+                        style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);
+               -fx-background-radius: 50px;
+               -fx-text-fill: white;
+               -fx-font-weight: bold;
+               -fx-font-size: 20px;
+               -fx-letter-spacing: 1px;"
+                        text="LOGIN">
+                    <effect>
+                        <DropShadow color="#4169E1"
+                                    radius="25"
+                                    spread="0.4"
+                                    offsetX="3"
+                                    offsetY="3"/>
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="15.0" bottom="15.0"/>
+                    </VBox.margin>
+                </Button>
+
+                <Button fx:id="google"
+                        onAction="#authgoolee"
+                        prefHeight="50.0"
+                        prefWidth="250.0"
+                        style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1);
+               -fx-background-radius: 50px;
+               -fx-text-fill: white;
+               -fx-font-weight: bold;
+               -fx-font-size: 20px;"
+                        text="GOOGLE">
+                    <graphic>
+                        <StackPane>
+                            <Circle fx:id="googleCircle"
+                                    radius="20"
+                                    fill="#FFFFFF"
+                                    stroke="#6495ED"
+                                    strokeWidth="2"/>
+                            <Label fx:id="googleLabel"
+                                   text="G"
+                                   style="-fx-font-size: 24px;
+                          -fx-text-fill: #6495ED;
+                          -fx-font-weight: bold;"/>
+                        </StackPane>
+                    </graphic>
+                    <effect>
+                        <DropShadow color="#4169E1"
+                                    radius="25"
+                                    spread="0.4"
+                                    offsetX="3"
+                                    offsetY="3"/>
+                    </effect>
+                    <VBox.margin>
+                        <Insets top="15.0" bottom="15.0"/>
+                    </VBox.margin>
+                </Button>
+
+                <!-- Links -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Hyperlink fx:id="forgotPassword" style="-fx-font-size: 14px; -fx-text-fill: #6495ED; -fx-underline: true;" text="Mot de Passe Oublié" onAction="#pagereset">
+                        <HBox.margin>
+                            <Insets right="65.0" top="20.0" />
+                        </HBox.margin>
+                    </Hyperlink>
+
+                    <Hyperlink fx:id="pageinscription" onAction="#pageinscription" style="-fx-font-size: 14px; -fx-text-fill: #6495ED; -fx-underline: true;" text="Inscription" >
+                        <HBox.margin>
+                            <Insets top="20.0" />
+                        </HBox.margin>
+                    </Hyperlink>
+                </HBox>
+
+                <!-- Error Message Label -->
+                <Label fx:id="errorMessageLabel" style="-fx-font-size: 14px; -fx-text-fill: #6495ED; -fx-opacity: 0;" />
+            </children>
+        </VBox>
+
+    </children>
+</StackPane>

@@ -1,0 +1,231 @@
+/* Enhanced front.css for ChouFliFilm JavaFX Template */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* Global Styles */
+.root {
+    -fx-font-family: 'Montserrat', sans-serif;
+    -fx-background-color: #0a0a1a;
+}
+
+/* Top Info Bar */
+.top-info-bar {
+    -fx-background-color: linear-gradient(to right, #121232, #1a1a36);
+    -fx-padding: 8px 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.info-text {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+
+/* Social Media Buttons */
+.social-btn {
+    -fx-background-radius: 50%;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 50%;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 1);
+    -fx-transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Main Navigation */
+.main-nav {
+    -fx-background-color: rgba(15, 15, 35, 0.85);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 5px 20px;
+}
+
+.logo {
+    -fx-effect: dropshadow(gaussian, rgba(100, 149, 237, 0.5), 10, 0, 0, 0);
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 3px;
+    -fx-transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 5, 0, 0, 0);
+}
+
+.nav-btn-active {
+    -fx-background-color: rgba(65, 105, 225, 0.3);
+    -fx-text-fill: #ffffff;
+    -fx-border-color: rgba(65, 105, 225, 0.7);
+    -fx-border-width: 0 0 2px 0;
+}
+
+.cart-btn {
+    -fx-background-color: linear-gradient(to right, #4CAF50, #45a049);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 5px;
+    -fx-transition: all 0.2s ease;
+}
+
+.cart-btn:hover {
+    -fx-background-color: linear-gradient(to right, #45a049, #3d8b3d);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.notification-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-transition: all 0.2s ease;
+}
+
+.notification-btn:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.notification-count {
+    -fx-background-color: #ff4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 50%;
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-alignment: center;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-translate-x: 7;
+    -fx-translate-y: -7;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+
+.logout-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px;
+    -fx-transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    -fx-background-color: rgba(255, 59, 59, 0.7);
+}
+
+/* Main Content Area */
+.main-content-area {
+    -fx-background-color: #0a0a1a;
+}
+
+.hero-background {
+    -fx-opacity: 0.95;
+}
+
+.hero-title {
+    -fx-text-fill: white;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Montserrat', sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+.hero-subtitle {
+    -fx-text-fill: #4fc3f7;
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Montserrat', sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 10, 0, 0, 0);
+}
+
+/* Search Bar */
+.search-container {
+    -fx-background-color: transparent;
+    -fx-padding: 10px 0;
+}
+
+.search-field {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-padding: 14px 12px 14px 35px;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-background-radius: 8px 0 0 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-prompt-text-fill: #888888;
+}
+
+.search-btn {
+    -fx-background-color: linear-gradient(to right, #2196f3, #1976d2);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 14px 25px;
+    -fx-background-radius: 0 8px 8px 0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 0);
+    -fx-transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    -fx-background-color: linear-gradient(to right, #1976d2, #0d47a1);
+}
+
+/* Feature Highlights */
+.feature-container {
+    -fx-padding: 20px 0;
+}
+
+.feature-item {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+    -fx-min-width: 150px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0, 0, 0);
+}
+
+.feature-text {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 5px 0 0 0;
+}

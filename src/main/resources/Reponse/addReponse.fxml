@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<StackPane style="-fx-background-color: #f0f0f0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.chouflifilm.controller.Reponse.reponseController">
+
+    <children>
+        <!-- Animated Background with Exact Circles from Login Page -->
+        <Pane fx:id="backgroundPane" mouseTransparent="true">
+            <!-- Left side circles with larger sizes and varied placements -->
+            <Circle fx:id="circle1" centerX="50" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle2" centerX="100" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle3" centerX="250" centerY="300" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle4" centerX="350" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle5" centerX="200" centerY="500" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle6" centerX="50" centerY="350" fill="rgba(100,149,237,0.15)" radius="130" />
+
+            <!-- Right side circles with larger sizes and creative placements -->
+            <Circle fx:id="circle7" centerX="650" centerY="200" fill="rgba(100,149,237,0.15)" radius="150" />
+            <Circle fx:id="circle8" centerX="750" centerY="400" fill="rgba(100,149,237,0.15)" radius="180" />
+            <Circle fx:id="circle9" centerX="850" centerY="250" fill="rgba(100,149,237,0.15)" radius="140" />
+            <Circle fx:id="circle10" centerX="925" centerY="150" fill="rgba(100,149,237,0.15)" radius="120" />
+            <Circle fx:id="circle11" centerX="800" centerY="300" fill="rgba(100,149,237,0.15)" radius="160" />
+            <Circle fx:id="circle12" centerX="950" centerY="450" fill="rgba(100,149,237,0.15)" radius="130" />
+        </Pane>
+
+        <!-- Main Dashboard Layout -->
+        <HBox prefWidth="5683.0" style="-fx-background-color: transparent;">
+            <!-- Sidebar Navigation -->
+            <VBox style="-fx-background-color: rgba(240,240,240,0.8); -fx-pref-width: 250px; -fx-max-width: 250px;">
+                <children>
+                    <ImageView fitHeight="158.0" fitWidth="135.0">
+                        <image>
+                            <Image url="@../images/logo.png" />
+                            <Image url="@../images/logo.png" />
+                        </image>
+                        <VBox.margin>
+                            <Insets bottom="20.0" left="50.0" right="20.0" top="40.0" />
+                        </VBox.margin>
+                    </ImageView>
+                    <StackPane />
+                    <!-- Sidebar Menu Items -->
+                    <VBox spacing="10" style="-fx-padding: 0 20px;">
+                        <children>
+                            <Button fx:id="btnDashboard" onAction="#pagedashboard" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px;" text="Dashboard" />
+
+                            <Button fx:id="btnUser" onAction="#pageuser" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px;" text="User" />
+
+                            <Button fx:id="btnReclamations" style="-fx-background-color: rgba(100,149,237,0.2); -fx-text-fill: #6495ED; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px;" text="Réclamations"  onAction="#pageReclamation"/>
+
+                            <Button fx:id="btnBlog" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px;" text="Blog" />
+
+                            <Button fx:id="btnFinance" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px; -fx-background-radius: 10px;" text="Finance" />
+
+                            <Button fx:id="btnUtilisateurs" onAction="#pageAssociation" style="-fx-background-color: transparent; -fx-text-fill: black; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Arial'; -fx-alignment: center-left; -fx-pref-width: 210px; -fx-padding: 12px;" text="Bénévolat" />
+                        </children>
+                    </VBox>
+
+                    <Button fx:id="logout" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1); -fx-background-radius: 50px; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;" text="LOGOUT">
+                        <graphic>
+                            <StackPane>
+                                <Circle fx:id="googleCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                                <Label fx:id="googleLabel" style="-fx-font-size: 24px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="🔓" />
+                            </StackPane>
+                        </graphic>
+                        <effect>
+                            <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                        </effect>
+                        <VBox.margin>
+                            <Insets bottom="15.0" left="20.0" top="130.0" />
+                        </VBox.margin>
+                    </Button>
+                </children>
+            </VBox>
+
+            <!-- Main Content Area -->
+            <VBox style="-fx-background-color: transparent; -fx-pref-width: 100%;">
+                <!-- Dashboard Content -->
+                <GridPane hgap="20" style="-fx-padding: 20px;" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+            </VBox>
+        </HBox>
+
+        <!-- Main Container -->
+        <AnchorPane prefHeight="712.0" prefWidth="1224.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 10;" stylesheets="@../css/dashbaord.css">
+            <effect>
+                <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+            </effect>
+            <children>
+                <Label layoutX="417.0" layoutY="30.0" prefHeight="54.0" prefWidth="406.0" style="-fx-font-size: 36px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="👤 Gestion Reponse">
+                    <effect>
+                        <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                    </effect>
+                    <font>
+                        <Font size="96.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="imageView" fitHeight="75.0" fitWidth="60.0" layoutX="1121.0" layoutY="14.0" />
+
+                <!-- Form Container - Wider to accommodate both sections -->
+                <AnchorPane layoutX="130.0" layoutY="105.0" prefHeight="582.0" prefWidth="980.0" style="-fx-background-color: rgba(240,240,240,0.8); -fx-background-radius: 20px; -fx-border-color: #e0e0e0; -fx-border-radius: 20px; -fx-border-width: 2px;">
+                    <effect>
+                        <DropShadow color="rgba(0,0,0,0.5)" radius="15" />
+                    </effect>
+                    <children>
+                        <!-- Title for the form -->
+                        <Label alignment="CENTER" layoutX="0.0" layoutY="16.0" prefHeight="54.0" prefWidth="980.0" style="-fx-font-size: 36px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="Choisir Votre Type de Réponse">
+                            <effect>
+                                <DropShadow color="#6495ED" radius="10" spread="0.3" />
+                            </effect>
+                        </Label>
+
+                        <!-- Dividing line down the middle -->
+                        <Line endX="0" endY="440" layoutX="490" layoutY="94" startX="0" startY="0" stroke="#6495ED" strokeWidth="2">
+                            <effect>
+                                <DropShadow color="#6495ED" radius="5" spread="0.1" />
+                            </effect>
+                        </Line>
+
+                        <!-- LEFT SIDE: Custom Text Response -->
+                        <Label alignment="CENTER" layoutX="0.0" layoutY="86.0" prefHeight="36.0" prefWidth="490.0" style="-fx-font-size: 24px; -fx-text-fill: black; -fx-font-weight: bold;" text="Réponse Personnalisée">
+                            <effect>
+                                <DropShadow color="black" radius="5" spread="0.1" />
+                            </effect>
+                        </Label>
+
+                        <!-- TextArea for custom response -->
+                        <TextArea fx:id="reponseTextArea" layoutX="40.0" layoutY="147.0" prefHeight="195.0" prefWidth="410.0" promptText="Ajouter Une Réponse Personnalisée" style="-fx-font-size: 16px; -fx-background-color: #f5f5f5; -fx-control-inner-background: #f5f5f5; -fx-text-fill: #6495ED; -fx-prompt-text-fill: #666666; -fx-background-radius: 15px; -fx-border-color: #e0e0e0; -fx-border-radius: 15px; -fx-border-width: 2px; -fx-padding: 12px;" wrapText="true" onMouseClicked="#effacerEroorCombobox">
+                            <effect>
+                                <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                            </effect>
+                        </TextArea>
+
+                        <!-- Error Label for TextArea -->
+                        <Label fx:id="textAreaErrorLabel" layoutX="40.0" layoutY="350.0" prefHeight="26.0" prefWidth="410.0" style="-fx-font-size: 14px; -fx-text-fill: #FF6B6B; -fx-font-weight: bold;" text="" visible="true" />
+
+                        <!-- Button for Custom Response -->
+                        <Button fx:id="customResponseButton" layoutX="108.0" layoutY="390.0" prefHeight="64.0" prefWidth="274.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1); -fx-background-radius: 50px; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;" text="Ajouter Réponse" onAction="#ajouterReponse">
+                            <graphic>
+                                <StackPane>
+                                    <Circle fx:id="customBtnCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                                    <Label fx:id="customBtnLabel" style="-fx-font-size: 24px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="➕" />
+                                </StackPane>
+                            </graphic>
+                            <effect>
+                                <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                            </effect>
+                        </Button>
+
+                        <!-- RIGHT SIDE: Predefined Responses -->
+                        <Label alignment="CENTER" layoutX="490.0" layoutY="86.0" prefHeight="36.0" prefWidth="490.0" style="-fx-font-size: 24px; -fx-text-fill: black; -fx-font-weight: bold;" text="Réponse Prédéfinie">
+                            <effect>
+                                <DropShadow color="black" radius="5" spread="0.1" />
+                            </effect>
+                        </Label>
+
+
+                        <ComboBox fx:id="predefinedResponseComboBox" layoutX="530.0" layoutY="220.0" prefHeight="50.0" prefWidth="410.0" promptText="Choisir une réponse prédéfinie" style="-fx-font-size: 16px; -fx-background-color: #f5f5f5; -fx-text-fill: #6495ED; -fx-prompt-text-fill: #666666; -fx-background-radius: 15px; -fx-border-color: #e0e0e0; -fx-border-radius: 15px; -fx-border-width: 2px;" onMouseClicked="#effacerEroorTextArea">
+                            <effect>
+                                <DropShadow color="rgba(100,149,237,0.2)" radius="15" />
+                            </effect>
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Ok bien reçu " />
+                                    <String fx:value="Validé" />
+                                    <String fx:value="Réclamation en cours de traitement" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <!-- Error Label for ComboBox -->
+                        <Label fx:id="comboBoxErrorLabel" layoutX="530.0" layoutY="280.0" prefHeight="26.0" prefWidth="410.0" style="-fx-font-size: 14px; -fx-text-fill: #FF6B6B; -fx-font-weight: bold;" text="" visible="true" />
+
+                        <!-- Button for Predefined Response -->
+                        <Button fx:id="predefinedResponseButton" layoutX="598.0" layoutY="390.0" prefHeight="64.0" prefWidth="274.0" style="-fx-background-color: linear-gradient(to right, #6495ED, #4169E1); -fx-background-radius: 50px; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 20px;" text="Utiliser Réponse" onAction="#ajouterReponse2">
+                            <graphic>
+                                <StackPane>
+                                    <Circle fx:id="predefinedBtnCircle" fill="#FFFFFF" radius="20" stroke="#6495ED" strokeWidth="2" />
+                                    <Label fx:id="predefinedBtnLabel" style="-fx-font-size: 24px; -fx-text-fill: #6495ED; -fx-font-weight: bold;" text="✓" />
+                                </StackPane>
+                            </graphic>
+                            <effect>
+                                <DropShadow color="#4169E1" offsetX="3" offsetY="3" radius="25" spread="0.4" />
+                            </effect>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+            <StackPane.margin>
+                <Insets left="300.0" top="40.0" />
+            </StackPane.margin>
+        </AnchorPane>
+    </children>
+</StackPane>
