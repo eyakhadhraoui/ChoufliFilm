@@ -18,7 +18,7 @@ L'objectif est de contribuer à la lutte contre la pauvreté, en lien avec l'**O
 
 1. Clonez le repository :
    ```bash
-   git clone https://github.com/utilisateur/projet.git
+   git clone https://github.com/eyakhadhraoui/ChoufliFilm.git
    cd ChoufliFilm
 
 2. Si vous utilisez WAMP ou XAMPP :
